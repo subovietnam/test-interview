@@ -2,6 +2,17 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Complexity
+1. Rotate Image:
+- validate: time = 10 + 2t = O(n)
+- rotateProcess: time = 2 + t*36t = 2 + 36t^2= O(n^2)
+- rotateMatrix: time = 4 + t = O(n)
+- total: O(n^2)
+2. Hotel Reservation:
+- validate: O(n)
+- bookings: O(n)
+- total: O(n)
+
 ## Installation
 
 ```bash

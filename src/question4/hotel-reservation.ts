@@ -51,8 +51,6 @@ export class HotelReservation {
     }
     var count = 0, i = 0, j = 0;
     const size = this.arrivals.length;
-    this.arrivals = this.arrivals.sort();
-    this.departures = this.departures.sort();
     while (i < size && j < size) {
       if (this.arrivals[i] < this.departures[j]) {
         i++;
@@ -65,6 +63,8 @@ export class HotelReservation {
         count--;
       }
     }
+    //t(b) = 10 + 10b = 10(1+b) = O(n)
     return true;
   }
+  
 }
