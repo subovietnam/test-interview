@@ -1,4 +1,4 @@
-import { HotelReservation } from './hotel-reservation';
+import { HotelReservation } from '../src/question4/hotel-reservation';
 
 describe('HotelReservation', () => {
   it('If size arrivals different departures then throw exception invalid input (with arrivals = [] and departures = [2, 6, 10] and k = 1)', () => {

@@ -3,16 +3,7 @@ export class RotateImage {
   }
   private validate(matrix, k) {
     var error = false;
-    if (!Number.isInteger(k)) {
-      error = true;
-    }
-    if (Number(k) < 1) {
-      error = true;
-    }
-    if (!Array.isArray(matrix)) {
-      error = true;
-    }
-    if (matrix.length < 2) {
+    if (!Number.isInteger(k) || Number(k) < 1 || !Array.isArray(matrix) || matrix.length < 2) {
       error = true;
     }
     for (let i = 0; i < matrix.length; i++) {
@@ -24,7 +15,7 @@ export class RotateImage {
     return error;
   }
   private rotateProcess(matrix) {
-    let n = matrix.length;
+    const n = matrix.length;
     for (let i = 0; i < Math.floor(n / 2); i++) {
       for (let j = 0; j < n - (2 * i) - 1; j++) {
         let tmp = matrix[i + j][n - 1 - i];
@@ -43,7 +34,7 @@ export class RotateImage {
     return matrix;
   };
   rotateMatrix(matrix, k) {
-    let error = this.validate(matrix, k);
+    const error = this.validate(matrix, k);
     if (error) {
       return 'invalid input';
     }

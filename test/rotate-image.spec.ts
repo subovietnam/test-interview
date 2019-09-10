@@ -1,4 +1,4 @@
-import { RotateImage } from './rotate-image';
+import { RotateImage } from '../src/question1/rotate-image';
 describe('RotateImage', () => {
   it('Invalid input in there k = "a"', () => {
     expect(new RotateImage().rotateMatrix([[1, 2], [3, 4]], "a")).toEqual("invalid input");

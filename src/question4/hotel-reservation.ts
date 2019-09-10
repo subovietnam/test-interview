@@ -45,7 +45,7 @@ export class HotelReservation {
     return error;
   }
   bookings() {
-    let error = this.validate();
+    const error = this.validate();
     if (error) {
       return 'invalid input'
     }
